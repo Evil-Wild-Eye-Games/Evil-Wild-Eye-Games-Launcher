@@ -2,7 +2,7 @@ import os, urllib.request, time
 
 groupname = "Evil Wild Eye Games"
 launcher_download_url = ""
-launcher_version = "0.0.28"
+launcher_version = "0.0.29"
 launcher_filename = "New Text Document.txt"
 game_1 = "Dungeon Escape Survival"
 launcher_directory = "C:/Evil Wild Eye Games"
