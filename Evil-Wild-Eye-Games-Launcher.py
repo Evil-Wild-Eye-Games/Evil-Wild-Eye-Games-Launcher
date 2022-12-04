@@ -1,7 +1,7 @@
 import os, urllib.request, time
 
 groupname = "Evil Wild Eye Games"
-launcher_download_url = ""
+launcher_download_url = "https://raw.githubusercontent.com/WLHQ/Test-Python-Code/main/Evil-Wild-Eye-Games-Launcher.py"
 launcher_version = "0.0.29"
 launcher_filename = "New Text Document.txt"
 game_1 = "Dungeon Escape Survival"
