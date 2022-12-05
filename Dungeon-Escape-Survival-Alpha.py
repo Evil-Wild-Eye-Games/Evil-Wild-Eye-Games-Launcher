@@ -1,7 +1,7 @@
 import time, random, webbrowser
 #----Above this line is our imports.----
 groupname = "\nEvil Wild Eye Games\n"
-gamebuild = "\nCurrent Build: A-0.0.107"
+gamebuild = "\nCurrent Build: A-0.0.108"
 debug = True
 debug_disabled_msg = "\nDebugging Tools are disabled."
 money = random.randint (400,9999) #----The player will recive a random amunt of gold that is specified in the range. The gold will be used to buy various items in the game to help the player along their adventures.
@@ -120,6 +120,7 @@ while True: #----This while loop will keep the game alive & run until is told to
     if menu == 1: #----Game Start----
         print("\nLoading...")
         time.sleep(1) #----Pauses the program for a number of specified seconds before continuing to execute----
+        print("On GitHub.com, navigate to the main page of the repository. Under your repository name, click Pull requests. In the Pull Requests list, click the pull request you would like to add to a merge queue. Click Merge when ready to add the pull request to the merge queue.")
         #----Dale start the story from this line----
         time.sleep(0) #----Pauses the program for a number of specified seconds before continuing to execute----
         if travel == False:
@@ -291,8 +292,8 @@ while True: #----This while loop will keep the game alive & run until is told to
             else: #----Runs when nothing else matches any statement specified with numbers in this case with the store----
                 print("\nThe item specified doesn't exist.")
                 time.sleep(2)
-        #----AMR prgram Weapon Stats here----
-        #----AMR prgram Player HP here----
+        #----AMR program Weapon Stats here----
+        #----AMR program Player HP here----
         #----AMR program Winning & Dying here----
     elif menu == 2: #----Cheats for giggles----
         print("\nHaha, there are no cheats!")
