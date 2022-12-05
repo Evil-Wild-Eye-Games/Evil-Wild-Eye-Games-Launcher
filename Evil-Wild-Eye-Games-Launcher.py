@@ -1,7 +1,7 @@
 import os, urllib.request, time
 
 groupname = "Evil Wild Eye Games"
-launcher_version = "A-0.0.42"
+launcher_version = "A-0.0.44"
 launcher_directory = "C:/Evil Wild Eye Games"
 launcher_directory_file = "C:/Evil Wild Eye Games/Evil-Wild-Eye-Games-Launcher.py"
 game_1 = "Dungeon Escape Survival"
@@ -67,7 +67,7 @@ while True:
         print("\nLoading settings...")
         time.sleep(0.5)
         while True:
-            user_settings_input = int(input("\nYou can Refresh Installed game files or Update the Launcher.\n\n1: Check the Launcher Version\n2: Refresh Game Library Files\n3: Exit Settings\n\nInsert a number: "))
+            user_settings_input = int(input("\nYou can Refresh Installed game files or check the launcher version.\n\n1: Check the Launcher Version\n2: Refresh Game Library Files\n3: Exit Settings\n\nInsert a number: "))
             if user_settings_input == 1:
                 print(launcher_version)
                 time.sleep(2)
