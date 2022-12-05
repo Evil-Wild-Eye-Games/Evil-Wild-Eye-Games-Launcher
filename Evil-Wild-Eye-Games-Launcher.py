@@ -1,11 +1,10 @@
 import os, urllib.request, time
 
 groupname = "Evil Wild Eye Games"
-launcher_download_url = "https://raw.githubusercontent.com/WLHQ/Test-Python-Code/main/Evil-Wild-Eye-Games-Launcher.py"
-launcher_version = "0.0.29"
-launcher_filename = "New Text Document.txt"
-game_1 = "Dungeon Escape Survival"
+launcher_version = "A-0.0.42"
 launcher_directory = "C:/Evil Wild Eye Games"
+launcher_directory_file = "C:/Evil Wild Eye Games/Evil-Wild-Eye-Games-Launcher.py"
+game_1 = "Dungeon Escape Survival"
 games_directory = "C:/Evil Wild Eye Games/Games"
 game_1_directory = "C:/Evil Wild Eye Games/Games/Dungeon Escape Survival"
 game_1_sound_directory = "C:/Evil Wild Eye Games/Games/Dungeon Escape Survival/Sound"
@@ -27,6 +26,7 @@ if os.path.exists(games_directory):
 else:
     print("The directory Games will be created inside of the " + groupname + " directory.")
     os.mkdir(games_directory)
+
 while True:
     user_input_launcher_menu = int(input("\nWelcome to the " + groupname + " Launcher!\nYou can view the library of games or take a look at the launchers settings.\n\n1: Game Library\n2: Launcher Settings\n\nInsert a number: "))
     if user_input_launcher_menu == 1:
@@ -67,7 +67,7 @@ while True:
         print("\nLoading settings...")
         time.sleep(0.5)
         while True:
-            user_settings_input = int(input("\nYou can Refresh Installed game files or Update the Launcher.\n\n1: Check the Launcher Version\n2: Refresh Game Library Files\n3: Update the Launcher\n\nInsert a number: "))
+            user_settings_input = int(input("\nYou can Refresh Installed game files or Update the Launcher.\n\n1: Check the Launcher Version\n2: Refresh Game Library Files\n3: Exit Settings\n\nInsert a number: "))
             if user_settings_input == 1:
                 print(launcher_version)
                 time.sleep(2)
@@ -77,16 +77,8 @@ while True:
                     print(games_directory + " has been removed from this computer. Run the launcher again to redownload the files.")
                     time.sleep(2)
             elif user_settings_input == 3:
-                # check if file exist 
-                if os.path.exists(launcher_filename): 
-                # delete the file 
-                    os.remove(launcher_filename)
-                    print(launcher_filename + " has been removed from this computer.")
-                    time.sleep(1)
-                    urllib.request.urlretrieve(launcher_download_url)
-                    time.sleep(2)
-                else: 
-                    print("File does not exist")
+                print("Leaving settings...")
+                break
             else:
                 print("That option doesn't exist! Try Again!")
                 time.sleep(2)
