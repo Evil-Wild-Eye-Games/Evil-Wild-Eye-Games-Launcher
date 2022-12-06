@@ -22,7 +22,7 @@ def updater():
     with open("Evil-Wild-Eye-Games-Launcher.py", "wb") as f:
         time.sleep(1)
         f.write(updated_file)
-        print("File Updated!")
+        print("\nFile Updated!")
 #----End Functions----
 updater()
 #Checking if Evil Wild Eye Games directory exists
@@ -44,7 +44,7 @@ while True:
     if user_input_launcher_menu == 1:
         print("\nLoading Library of Games...")
         time.sleep(0.5)
-        user_input_library = int(input("\nFrom here you can launch our games and download game assets as needed.\nWhich game do you want to play?\n\n1: " + game_1 + "\n2: Placeholder\n\nInput the number that corresponds with its game here: "))
+        user_input_library = int(input("\nFrom here you can launch our games and download game assets as needed.\nWhich game do you want to play?\n1: " + game_1 + "\n\nInput the number that corresponds with its game here: "))
         if user_input_library == 1:
             print("\nNow starting " + game_1)
         
@@ -71,8 +71,6 @@ while True:
             time.sleep(6)
             exec(open(game_1_launch).read())
             break
-        elif user_input_library == 2:
-            print("Placeholder")
         else:
             print("That number of input doesn't exist at this time!")
     elif user_input_launcher_menu == 2:
