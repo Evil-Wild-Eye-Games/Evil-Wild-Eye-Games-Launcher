@@ -1,7 +1,7 @@
 import os, urllib.request, time
 
 groupname = "Evil Wild Eye Games"
-launcher_version = "A-0.0.44"
+launcher_version = "A-0.0.46"
 launcher_directory = "C:/Evil Wild Eye Games"
 launcher_directory_file = "C:/Evil Wild Eye Games/Evil-Wild-Eye-Games-Launcher.py"
 game_1 = "Dungeon Escape Survival"
@@ -10,7 +10,7 @@ game_1_directory = "C:/Evil Wild Eye Games/Games/Dungeon Escape Survival"
 game_1_sound_directory = "C:/Evil Wild Eye Games/Games/Dungeon Escape Survival/Sound"
 game_1_directory_file = "C:/Evil Wild Eye Games/Games/Dungeon Escape Survival/Dungeon-Escape-Survival-Alpha.py"
 game_1_file = "Dungeon-Escape-Survival-Alpha.py"
-game_1_download_url = "https://raw.githubusercontent.com/WLHQ/Test-Python-Code/main/Dungeon-Escape-Survival-Alpha.py"
+game_1_download_url = "https://raw.githubusercontent.com/Evil-Wild-Eye-Games/Dungeon-Escape-Survival/main/Dungeon-Escape-Survival-Alpha.py"
 game_1_launch = "C:/Evil Wild Eye Games/Games/Dungeon Escape Survival/Dungeon-Escape-Survival-Alpha.py"
 
 #Checking if Evil Wild Eye Games directory exists
@@ -67,7 +67,7 @@ while True:
         print("\nLoading settings...")
         time.sleep(0.5)
         while True:
-            user_settings_input = int(input("\nYou can Refresh Installed game files or check the launcher version.\n\n1: Check the Launcher Version\n2: Refresh Game Library Files\n3: Exit Settings\n\nInsert a number: "))
+            user_settings_input = int(input("\nYou can Refresh Installed game files or check the launcher version.\n\n1: Check the Launcher Version\n2: Refresh Game Library Files\n3: Update Launcher\n4: Exit Settings\n\nInsert a number: "))
             if user_settings_input == 1:
                 print(launcher_version)
                 time.sleep(2)
@@ -77,6 +77,16 @@ while True:
                     print(games_directory + " has been removed from this computer. Run the launcher again to redownload the files.")
                     time.sleep(2)
             elif user_settings_input == 3:
+                # Get the updated file
+                response = urllib.request.urlopen("https://raw.githubusercontent.com/Evil-Wild-Eye-Games/Evil-Wild-Eye-Games-Launcher/main/Evil-Wild-Eye-Games-Launcher.py")
+                updated_file = response.read()
+
+                # Write the updated file
+                with open("Evil-Wild-Eye-Games-Launcher.py", "wb") as f:
+                    f.write(updated_file)
+
+                print("File Updated!")
+            elif user_settings_input == 4:
                 print("Leaving settings...")
                 break
             else:
