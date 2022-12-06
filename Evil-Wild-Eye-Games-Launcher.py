@@ -1,7 +1,7 @@
 import os, urllib.request, time
-
+#----End Imports----
 groupname = "Evil Wild Eye Games"
-launcher_version = "A-0.0.48"
+launcher_version = "A-0.0.49"
 launcher_directory = "C:/Evil Wild Eye Games"
 launcher_directory_file = "C:/Evil Wild Eye Games/Evil-Wild-Eye-Games-Launcher.py"
 game_1 = "Dungeon Escape Survival"
@@ -12,7 +12,19 @@ game_1_directory_file = "C:/Evil Wild Eye Games/Games/Dungeon Escape Survival/Du
 game_1_file = "Dungeon-Escape-Survival-Alpha.py"
 game_1_download_url = "https://raw.githubusercontent.com/Evil-Wild-Eye-Games/Dungeon-Escape-Survival/main/Dungeon-Escape-Survival-Alpha.py"
 game_1_launch = "C:/Evil Wild Eye Games/Games/Dungeon Escape Survival/Dungeon-Escape-Survival-Alpha.py"
+#----End Variables----
+def updater():
+    # Get the updated file
+    response = urllib.request.urlopen("https://raw.githubusercontent.com/Evil-Wild-Eye-Games/Evil-Wild-Eye-Games-Launcher/main/Evil-Wild-Eye-Games-Launcher.py")
+    updated_file = response.read()
 
+    # Write the updated file
+    with open("Evil-Wild-Eye-Games-Launcher.py", "wb") as f:
+        time.sleep(1)
+        f.write(updated_file)
+        print("File Updated!")
+#----End Functions----
+updater()
 #Checking if Evil Wild Eye Games directory exists
 if os.path.exists(launcher_directory):
     print("The directory " + groupname + " exists and is located at " + launcher_directory)
@@ -77,15 +89,7 @@ while True:
                     print(games_directory + " has been removed from this computer. Run the launcher again to redownload the files.")
                     time.sleep(2)
             elif user_settings_input == 3:
-                # Get the updated file
-                response = urllib.request.urlopen("https://raw.githubusercontent.com/Evil-Wild-Eye-Games/Evil-Wild-Eye-Games-Launcher/main/Evil-Wild-Eye-Games-Launcher.py")
-                updated_file = response.read()
-
-                # Write the updated file
-                with open("Evil-Wild-Eye-Games-Launcher.py", "wb") as f:
-                    f.write(updated_file)
-
-                print("File Updated!")
+                updater()
             elif user_settings_input == 4:
                 print("Leaving settings...")
                 break
