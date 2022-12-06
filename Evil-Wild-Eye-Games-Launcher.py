@@ -1,7 +1,7 @@
 import os, urllib.request, time
 #----End Imports----
 groupname = "Evil Wild Eye Games"
-launcher_version = "A-0.0.55"
+launcher_version = "A-0.0.56"
 launcher_directory = "C:/Evil Wild Eye Games"
 launcher_file = "Evil-Wild-Eye-Games-Launcher.py"
 launcher_directory_file = "C:/Evil Wild Eye Games/Evil-Wild-Eye-Games-Launcher.py"
@@ -24,7 +24,7 @@ def updater():
     with open(launcher_file, "wb") as f:
         time.sleep(1)
         f.write(updated_file)
-        print("\nFile Updated!")
+        print("\n" + launcher_file + " was Updated!")
 
 def sleep_p5():
     time.sleep(0.5)
@@ -100,7 +100,7 @@ while True:
                 with open(game_1_directory_file, "wb") as f:
                     time.sleep(1)
                     f.write(updated_file)
-                    print("\nFile Updated!")
+                    print("\n" + game_1_file + " was Updated!")
             elif user_settings_input == 3:
                 updater()
             elif user_settings_input == 4:
