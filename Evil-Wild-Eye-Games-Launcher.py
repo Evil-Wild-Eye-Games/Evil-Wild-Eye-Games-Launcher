@@ -1,7 +1,7 @@
 import os, urllib.request, time
 #----End Imports----
 groupname = "Evil Wild Eye Games"
-launcher_version = "A-0.0.49"
+launcher_version = "A-0.0.50"
 launcher_directory = "C:/Evil Wild Eye Games"
 launcher_directory_file = "C:/Evil Wild Eye Games/Evil-Wild-Eye-Games-Launcher.py"
 game_1 = "Dungeon Escape Survival"
