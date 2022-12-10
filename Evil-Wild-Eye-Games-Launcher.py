@@ -1,7 +1,8 @@
 import os, urllib.request, time
 #----End Imports----
 groupname = "Evil Wild Eye Games"
-launcher_version = "A-0.0.56"
+launcher_version = "\nA-0.0.58"
+enter_key_message = "\nPress Enter to continue."
 launcher_directory = "C:/Evil Wild Eye Games"
 launcher_file = "Evil-Wild-Eye-Games-Launcher.py"
 launcher_directory_file = "C:/Evil Wild Eye Games/Evil-Wild-Eye-Games-Launcher.py"
@@ -90,7 +91,7 @@ while True:
             user_settings_input = int(input("\nYou can Refresh Installed game files, check the launcher version, or update the launcher.\n\n1: Check the Launcher Version\n2: Update " + game_1 + " \n3: Update Launcher\n4: Exit Settings\n\nInsert a number: "))
             if user_settings_input == 1:
                 print(launcher_version)
-                sleep_2()
+                enter_input = str(input(enter_key_message))
             elif user_settings_input == 2:
                 # Get the updated file
                 response = urllib.request.urlopen(game_1_download_url)
@@ -101,6 +102,7 @@ while True:
                     time.sleep(1)
                     f.write(updated_file)
                     print("\n" + game_1_file + " was Updated!")
+                    sleep_p5()
             elif user_settings_input == 3:
                 updater()
             elif user_settings_input == 4:
