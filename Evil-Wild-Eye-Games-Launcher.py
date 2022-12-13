@@ -1,7 +1,7 @@
 import os, urllib.request, time
 #----End Imports----
 groupname = "Evil Wild Eye Games"
-launcher_version = "\nA-0.0.58"
+launcher_version = "\nB-0.1.1"
 enter_key_message = "\nPress Enter to continue."
 launcher_directory = "C:/Evil Wild Eye Games"
 launcher_file = "Evil-Wild-Eye-Games-Launcher.py"
@@ -10,11 +10,11 @@ launcher_download_url = "https://raw.githubusercontent.com/Evil-Wild-Eye-Games/E
 game_1 = "Dungeon Escape Survival"
 games_directory = "C:/Evil Wild Eye Games/Games"
 game_1_directory = "C:/Evil Wild Eye Games/Games/Dungeon Escape Survival"
-game_1_directory_file = "C:/Evil Wild Eye Games/Games/Dungeon Escape Survival/Dungeon-Escape-Survival-Alpha.py"
+game_1_directory_file = "C:/Evil Wild Eye Games/Games/Dungeon Escape Survival/Dungeon-Escape-Survival-Beta.py"
 game_1_sound_directory = "C:/Evil Wild Eye Games/Games/Dungeon Escape Survival/Sound"
-game_1_file = "Dungeon-Escape-Survival-Alpha.py"
-game_1_download_url = "https://raw.githubusercontent.com/Evil-Wild-Eye-Games/Dungeon-Escape-Survival/main/Dungeon-Escape-Survival-Alpha.py"
-game_1_launch = "C:/Evil Wild Eye Games/Games/Dungeon Escape Survival/Dungeon-Escape-Survival-Alpha.py"
+game_1_file = "Dungeon-Escape-Survival-Beta.py"
+game_1_download_url = "https://raw.githubusercontent.com/Evil-Wild-Eye-Games/Dungeon-Escape-Survival/main/Dungeon-Escape-Survival-Beta.py"
+game_1_launch = "C:/Evil Wild Eye Games/Games/Dungeon Escape Survival/Dungeon-Escape-Survival-Beta.py"
 #----End Variables----
 def updater():
     # Get the updated file
