@@ -1,7 +1,7 @@
 import os, urllib.request, time
 #----End Imports----
 groupname = "Evil Wild Eye Games"
-launcher_version = "\nB-0.1.1"
+launcher_version = "\nB-0.1.2"
 enter_key_message = "\nPress Enter to continue."
 launcher_directory = "C:/Evil Wild Eye Games"
 launcher_file = "Evil-Wild-Eye-Games-Launcher.py"
@@ -11,7 +11,6 @@ game_1 = "Dungeon Escape Survival"
 games_directory = "C:/Evil Wild Eye Games/Games"
 game_1_directory = "C:/Evil Wild Eye Games/Games/Dungeon Escape Survival"
 game_1_directory_file = "C:/Evil Wild Eye Games/Games/Dungeon Escape Survival/Dungeon-Escape-Survival-Beta.py"
-game_1_sound_directory = "C:/Evil Wild Eye Games/Games/Dungeon Escape Survival/Sound"
 game_1_file = "Dungeon-Escape-Survival-Beta.py"
 game_1_download_url = "https://raw.githubusercontent.com/Evil-Wild-Eye-Games/Dungeon-Escape-Survival/main/Dungeon-Escape-Survival-Beta.py"
 game_1_launch = "C:/Evil Wild Eye Games/Games/Dungeon Escape Survival/Dungeon-Escape-Survival-Beta.py"
@@ -65,20 +64,13 @@ while True:
                 print("\nThe directory " + game_1 + " will be created inside of the " + groupname + " directory.")
                 os.mkdir(game_1_directory)
             sleep_2()
-            #Checking if Dungeon-Escape-Survival-Alpha.py file exists
+            #Checking if Dungeon-Escape-Survival-Beta.py file exists
             if os.path.exists(game_1_directory_file):
                 print("\n" + game_1_file + " exists and is located at " + game_1_directory_file)
             else:
                 print("\nThe file " + game_1_file + " will be downloaded from " + game_1_download_url + " and put inside of the " + game_1 + " directory.")
                 urllib.request.urlretrieve(game_1_download_url, game_1_directory_file)
             sleep_2()
-            #Checking if Sound directory exists
-            if os.path.exists(game_1_sound_directory):
-                print("\nThe directory Sound exists and is located at " + game_1_sound_directory)
-            else:
-                print("\nThe directory Sound will be created inside of the " + game_1 + " directory.")
-                os.mkdir(game_1_sound_directory)
-            sleep_6()
             exec(open(game_1_launch).read())
             break
         else:
