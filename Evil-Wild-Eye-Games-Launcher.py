@@ -1,7 +1,7 @@
 import os, urllib.request, time
 #----End Imports----
 groupname = "Evil Wild Eye Games"
-launcher_version = "\nB-0.1.2"
+launcher_version = "\n1.0"
 enter_key_message = "\nPress Enter to continue."
 launcher_directory = "C:/Evil Wild Eye Games"
 launcher_file = "Evil-Wild-Eye-Games-Launcher.py"
@@ -10,22 +10,20 @@ launcher_download_url = "https://raw.githubusercontent.com/Evil-Wild-Eye-Games/E
 game_1 = "Dungeon Escape Survival"
 games_directory = "C:/Evil Wild Eye Games/Games"
 game_1_directory = "C:/Evil Wild Eye Games/Games/Dungeon Escape Survival"
-game_1_directory_file = "C:/Evil Wild Eye Games/Games/Dungeon Escape Survival/Dungeon-Escape-Survival-Beta.py"
-game_1_file = "Dungeon-Escape-Survival-Beta.py"
-game_1_download_url = "https://raw.githubusercontent.com/Evil-Wild-Eye-Games/Dungeon-Escape-Survival/main/Dungeon-Escape-Survival-Beta.py"
-game_1_launch = "C:/Evil Wild Eye Games/Games/Dungeon Escape Survival/Dungeon-Escape-Survival-Beta.py"
+game_1_directory_file = "C:/Evil Wild Eye Games/Games/Dungeon Escape Survival/Dungeon-Escape-Survival.py"
+game_1_file = "Dungeon-Escape-Survival.py"
+game_1_download_url = "https://raw.githubusercontent.com/Evil-Wild-Eye-Games/Dungeon-Escape-Survival/main/Dungeon-Escape-Survival.py"
+game_1_launch = "C:/Evil Wild Eye Games/Games/Dungeon Escape Survival/Dungeon-Escape-Survival.py"
 #----End Variables----
 def updater():
     # Get the updated file
     response = urllib.request.urlopen(launcher_download_url)
     updated_file = response.read()
-
     # Write the updated file
     with open(launcher_file, "wb") as f:
         time.sleep(1)
         f.write(updated_file)
         print("\n" + launcher_file + " was Updated!")
-
 def sleep_p5():
     time.sleep(0.5)
 def sleep_2():
@@ -64,7 +62,7 @@ while True:
                 print("\nThe directory " + game_1 + " will be created inside of the " + groupname + " directory.")
                 os.mkdir(game_1_directory)
             sleep_2()
-            #Checking if Dungeon-Escape-Survival-Beta.py file exists
+            #Checking if Dungeon-Escape-Survival.py file exists
             if os.path.exists(game_1_directory_file):
                 print("\n" + game_1_file + " exists and is located at " + game_1_directory_file)
             else:
